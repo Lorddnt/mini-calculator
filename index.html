@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        .bigbanner {
+            background-color: whitesmoke;
+            height: 500px;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+        .banner {
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            width: 450px;
+            margin: auto;
+            border-radius: 30px;
+            background-color: aqua;
+        }
+        .count {
+            
+            height: 200px;
+            width: 150px;
+            justify-content: center;
+            text-align: center;
+        }
+        .box {
+            margin-top: 40px;
+        }
+        .count2 {
+            position: relative;
+        }
+        .two {
+            position: absolute;
+            top: 98px;
+            left: 22px;
+        }
+        .gang {
+        position: relative;
+        justify-content: center;
+        height: 200px;
+        width: 450px;
+        background-color: aqua;
+      }
+      .butt {
+        height: 30px;
+        width: 100px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+      #sum {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        bottom: 10px;
+        left: 42%;
+        font-size: 30px;
+        font-weight: bolder;
+      }
+    </style>
+</head>
+<body>
+    <div class="bigbanner">
+        <div class="banner">
+    <div class="count count1">
+        <h1 class="heg1">0</h1>
+        <div class="box">
+            <button class="three butt">Input1</button>
+        </div>
+    </div>
+    <div class="count count2">
+            <button class="two butt">Clear</button>
+    </div>
+    <div class="count count3">
+        <h1 class="heg2">0</h1>
+        <div class="box">
+            <button class="one butt">Input2</button>
+        </div>
+    </div>
+    <div class="gang">
+        <button class="butt" id="add">Add</button>
+        <button class="butt" id="subtract">Subtract</button>
+        <button class="butt" id="divide">Divide</button>
+        <button class="butt" id="multiply">Multiply</button>
+        <div id="sum">Result:</div>
+    </div>
+</div>
+</div>
+
+
+    <script>
+        let one = document.querySelector('.one');
+        let two = document.querySelector('.two');
+        let three = document.querySelector('.three');
+        let head1 = document.querySelector('.heg1');
+        let head2 = document.querySelector('.heg2');
+        var count = 0;
+        var cunt = 0;
+        three.onclick = function () {
+            count++;
+            head1.innerHTML = count;
+            head1.style.color = 'blue'
+        }
+        one.onclick = function () {
+            cunt++;
+            head2.innerHTML = cunt;
+            head2.style.color = 'red'
+        }
+        two.onclick = function () {
+            count = 0;
+            cunt = 0;
+            head1.innerHTML = count;
+            head2.innerHTML = cunt;
+            data.innerHTML = 'Result: ' + 0;
+    };
+        
+        document.querySelector('.heg1').innerHTML = count;
+        document.querySelector('.heg2').innerHTML = cunt;
+        let data = document.getElementById('sum');
+        let btn = document.getElementById('add');
+        let btn1 = document.getElementById('subtract');
+        let btn2 = document.getElementById('divide');
+        let btn3 = document.getElementById('multiply');
+        btn.onclick = function() {
+            let result = count + cunt;
+            data.innerHTML = 'Result: ' + result;
+            data.style.color = 'green';
+        }
+        btn1.onclick = function() {
+            let result = count - cunt;
+            data.innerHTML = 'Result: ' + result;
+            data.style.color = 'green';
+        }
+        btn2.onclick = function() {
+            let result = count / cunt;
+            data.innerHTML = 'Result: ' + result;
+            data.style.color = 'green';
+        }
+        btn3.onclick = function() {
+            let result = count * cunt;
+            data.innerHTML = 'Result: ' + result;
+            data.style.color = 'green';
+        }
+       
+    </script>
+</body>
+</html>
